@@ -12,33 +12,49 @@ interface CoreTeamSectionProps {
   membersList?: CoreTeamMember[]
 }
 
-// 4 Main Convenors & Lead Organizers for home page
-const mainPageCoreTeamMembers = coreTeamMembers.filter((member) => {
-  const upper = member.name.toUpperCase()
-  return (
-    upper.includes('SUGUMAR') ||
-    upper.includes('ANKITA') ||
-    upper.includes('SHREYA') ||
-    upper.includes('POOJA')
-  )
-})
+const normalizeDisplayIds = (members: CoreTeamMember[]) =>
+  members
+    .filter((member) => member.name && member.name.trim().length > 0)
+    .sort((a, b) => Number(a.id) - Number(b.id))
+    .map((member, index) => ({
+      ...member,
+      id: String(index + 1).padStart(2, '0'),
+    }))
 
-// Remaining 14 members for /team page
-export const restTeamMembers = coreTeamMembers.filter((member) => {
-  const upper = member.name.toUpperCase()
-  return (
-    !upper.includes('SUGUMAR') &&
-    !upper.includes('ANKITA') &&
-    !upper.includes('SHREYA') &&
-    !upper.includes('POOJA')
-  )
-})
+// 4 Main Convenors & Lead Organizers for home page
+const mainPageCoreTeamMembers = normalizeDisplayIds(
+  coreTeamMembers.filter((member) => {
+    const upper = member.name.toUpperCase()
+    return (
+      upper.includes('SUGUMAR') ||
+      upper.includes('ANKITA') ||
+      upper.includes('SHREYA') ||
+      upper.includes('POOJA')
+    )
+  })
+)
+
+// Remaining members for /team page, reordered from 01 upward without empty records
+export const restTeamMembers = normalizeDisplayIds(
+  coreTeamMembers.filter((member) => {
+    const upper = member.name.toUpperCase()
+    return (
+      !upper.includes('SUGUMAR') &&
+      !upper.includes('ANKITA') &&
+      !upper.includes('SHREYA') &&
+      !upper.includes('POOJA')
+    )
+  })
+)
 
 export default function CoreTeamSection({ membersList }: CoreTeamSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const pinStageRef = useRef<HTMLDivElement>(null)
 
-  const activeCoreTeamMembers = membersList || mainPageCoreTeamMembers
+  const activeCoreTeamMembers = (membersList || mainPageCoreTeamMembers).map((member, index) => ({
+    ...member,
+    id: String(index + 1).padStart(2, '0'),
+  }))
 
   // Stage Refs
   const transitionLayerRef = useRef<HTMLDivElement>(null)
@@ -190,12 +206,12 @@ export default function CoreTeamSection({ membersList }: CoreTeamSectionProps) {
     <div
       ref={sectionRef}
       id="core-team"
-      className="relative w-full h-[1400vh] bg-[#01050F] text-[#F2F6FF] font-mono-tech select-none"
+      className="relative w-full h-[1400vh] bg-[#01050F] text-[#F2F6FF] font-mono-tech select-none overflow-x-hidden"
     >
       {/* 100vh Sticky Viewport Stage (PINNED BY GSAP SCROLLTRIGGER) */}
       <div
         ref={pinStageRef}
-        className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center"
+        className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center px-2 sm:px-4"
       >
         {/* Deep Cyber Environment Background */}
         <div className="absolute inset-0 cyber-grid-bg opacity-15 pointer-events-none z-0" />
@@ -232,7 +248,7 @@ export default function CoreTeamSection({ membersList }: CoreTeamSectionProps) {
             ========================================================================= */}
         <div
           ref={commandInterfaceRef}
-          className="absolute inset-0 flex flex-col justify-between p-6 sm:p-10 z-30 max-w-7xl mx-auto w-full"
+          className="absolute inset-0 flex flex-col justify-between p-4 sm:p-6 md:p-10 z-30 max-w-7xl mx-auto w-full"
         >
           {/* Interface Header */}
           <div className="flex items-center justify-between border-b border-[#147DFF]/30 pb-3 text-xs text-[#8CA4C4]">
@@ -253,9 +269,9 @@ export default function CoreTeamSection({ membersList }: CoreTeamSectionProps) {
           </div>
 
           {/* Main Stage: Scrollable Side Nav + Personnel Card & Dossier */}
-          <div className="relative flex-1 flex flex-col lg:flex-row items-center justify-center gap-6 py-4 my-auto">
+          <div className="relative flex-1 flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 py-3 sm:py-4 my-auto w-full">
             {/* Side Navigation Indicator (Desktop: Vertical Left Scrollable, Mobile: Horizontal Bar) */}
-            <div className="lg:absolute left-0 top-1/2 lg:-translate-y-1/2 flex lg:flex-col flex-row gap-1 z-40 bg-[#020A1A]/90 backdrop-blur-md border border-[#147DFF]/30 p-2 rounded-xs max-h-[55vh] overflow-y-auto custom-scrollbar w-full lg:w-auto">
+            <div className="lg:absolute left-0 top-1/2 lg:-translate-y-1/2 flex lg:flex-col flex-row gap-1 z-40 bg-[#020A1A]/90 backdrop-blur-md border border-[#147DFF]/30 p-2 rounded-xs max-h-[55vh] overflow-y-auto custom-scrollbar w-full lg:w-auto max-w-full">
               <div className="hidden lg:block text-[9px] text-[#567299] tracking-widest uppercase mb-1 border-b border-[#147DFF]/20 pb-1 text-center">
                 INDEX ({formattedTotal})
               </div>
@@ -284,16 +300,16 @@ export default function CoreTeamSection({ membersList }: CoreTeamSectionProps) {
             </div>
 
             {/* Personnel Cards Stack */}
-            <div className="relative w-full max-w-4xl h-[420px] sm:h-[460px] flex items-center justify-center lg:ml-20">
+            <div className="relative w-full max-w-4xl h-[360px] sm:h-[420px] md:h-[460px] flex items-center justify-center lg:ml-20">
               {activeCoreTeamMembers.map((member, idx) => {
                 return (
                   <div
                     key={member.id}
                     ref={(el) => { memberCardRefs.current[idx] = el }}
-                    className="absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 border border-[#147DFF]/50 bg-[#020A1A]/95 backdrop-blur-2xl p-6 sm:p-8 rounded-xs shadow-[0_0_40px_rgba(20,125,255,0.25)]"
+                    className="absolute inset-0 flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 border border-[#147DFF]/50 bg-[#020A1A]/95 backdrop-blur-2xl p-4 sm:p-5 md:p-8 rounded-xs shadow-[0_0_40px_rgba(20,125,255,0.25)]"
                   >
                     {/* LEFT COLUMN: PHOTOGRAPH FRAME WITH SCANNING EFFECT */}
-                    <div className="relative w-44 h-52 sm:w-56 sm:h-64 shrink-0 border border-[#00D9FF]/50 bg-[#030E24] rounded-xs overflow-hidden group shadow-[0_0_25px_rgba(0,217,255,0.2)]">
+                    <div className="relative w-full max-w-[220px] h-[220px] sm:w-56 sm:h-64 md:w-60 md:h-72 shrink-0 border border-[#00D9FF]/50 bg-[#030E24] rounded-xs overflow-hidden group shadow-[0_0_25px_rgba(0,217,255,0.2)]">
                       {/* Frame Corner Accents */}
                       <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#00D9FF] z-20" />
                       <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#00D9FF] z-20" />
@@ -359,10 +375,10 @@ export default function CoreTeamSection({ membersList }: CoreTeamSectionProps) {
 
                       {/* Name & Role */}
                       <div className="py-2">
-                        <h3 className="hero-title text-2xl sm:text-3xl font-black text-[#F2F6FF] tracking-tight glow-text-white">
+                        <h3 className="hero-title text-xl sm:text-2xl md:text-3xl font-black text-[#F2F6FF] tracking-tight glow-text-white break-words">
                           {member.name}
                         </h3>
-                        <div className="text-sm sm:text-base font-bold text-[#00D9FF] tracking-wider uppercase mt-1">
+                        <div className="text-xs sm:text-sm md:text-base font-bold text-[#00D9FF] tracking-wider uppercase mt-1 break-words">
                           {member.role}
                         </div>
                       </div>

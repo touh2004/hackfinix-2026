@@ -181,13 +181,13 @@ export default function PrizePoolSection() {
                 <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#147DFF] to-transparent" />
                 <div className="flex items-center justify-between text-[10px] text-[#00D9FF] mb-1">
                   <span>02 // RUNNER UP</span>
-                  <Award size={13} className="text-[#00D9FF]" />
+                  <Award size={13} className="text-[#e7edee]" />
                 </div>
                 <div className="text-[11px] text-[#8CA4C4] uppercase font-bold flex items-center justify-between">
                   <span>SECOND PRIZE</span>
-                  <span className="text-[8px] text-[#00D9FF] bg-[#00D9FF]/10 px-1 py-0.2 border border-[#00D9FF]/30 rounded-xs font-bold">PER THEME</span>
+                  <span className="text-[8px] text-[#e6f0f1] bg-[#00D9FF]/10 px-1 py-0.2 border border-[#00D9FF]/30 rounded-xs font-bold">PER THEME</span>
                 </div>
-                <div className="hero-title text-2xl sm:text-3xl text-[#00D9FF] glow-text-cyan my-1 font-extrabold">
+                <div className="hero-title text-2xl sm:text-3xl text-white glow-text-cyan my-1 font-extrabold">
                   ₹20,000
                 </div>
                 <div className="text-[8px] text-[#00D9FF] uppercase font-bold tracking-wider mb-1">

@@ -345,7 +345,7 @@ export default function BountyTerminalSection() {
                   PER THEME
                 </span>
               </div>
-              <div className="hero-title text-4xl sm:text-5xl font-black text-[#00D9FF] glow-text-cyan mt-3 mb-1">
+              <div className="hero-title text-4xl sm:text-5xl font-black text-[#F2F6FF] glow-text-white mt-3 mb-1">
                 ₹20,000
               </div>
               <div className="text-[10px] text-[#00D9FF] tracking-wider uppercase font-bold mb-3">
