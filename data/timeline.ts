@@ -13,7 +13,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-01',
     phase: 'ARRIVAL & CHECK-IN',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '08:00 AM - 09:00 AM',
     title: 'Registration & Breakfast',
     description: 'Check-in for all participants and morning meal.',
@@ -23,7 +23,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-02',
     phase: 'OPENING PROTOCOL',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '09:00 AM - 10:00 AM',
     title: 'Opening Ceremony',
     description: 'Welcome address, plus speeches by the Principal, Chief Guest, and CEO.',
@@ -33,7 +33,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-03',
     phase: 'PROBLEM ANNOUNCEMENT',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '10:00 AM - 10:30 AM',
     title: 'Problem Statement Reveal',
     description: 'Rules and themes announced.',
@@ -43,7 +43,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-04',
     phase: 'MARATHON START',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '10:30 AM',
     title: 'Hacking Begins',
     description: '24-hour countdown starts.',
@@ -53,7 +53,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-05',
     phase: 'REFUEL',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '01:00 PM - 02:00 PM',
     title: 'Lunch Break',
     description: 'Catered lunch for teams and mentors.',
@@ -63,7 +63,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-06',
     phase: 'MENTORSHIP MATRIX 1',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '02:00 PM - 04:00 PM',
     title: 'Mentoring Round 1',
     description: 'Mentors assist teams with ideation and architecture.',
@@ -73,7 +73,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-07',
     phase: 'EVENING REFRESHMENT',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '05:00 PM - 05:30 PM',
     title: 'Evening Snacks',
     description: 'Quick tea and snacks break.',
@@ -83,7 +83,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-08',
     phase: 'RELAXATION & MUSIC',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '07:00 PM - 08:00 PM',
     title: 'Jamming Session',
     description: '1-hour music and relaxation session to unwind.',
@@ -93,7 +93,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-09',
     phase: 'NIGHT REFUEL',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '08:00 PM - 09:00 PM',
     title: 'Dinner',
     description: 'Dinner served for all attendees.',
@@ -103,7 +103,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-10',
     phase: 'MENTORSHIP MATRIX 2',
-    date: '11 SEP 2026',
+    date: '24 SEP 2026',
     time: '10:00 PM - 11:30 PM',
     title: 'Mentoring Round 2',
     description: 'Technical troubleshooting and progress check.',
@@ -113,7 +113,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-11',
     phase: 'MIDNIGHT SURGE',
-    date: '12 SEP 2026',
+    date: '25 SEP 2026',
     time: '12:00 AM - 01:00 AM',
     title: 'Midnight Snacks',
     description: 'Energy drinks and late-night snacks distributed.',
@@ -123,7 +123,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-12',
     phase: 'OVERNIGHT COMPUTE',
-    date: '12 SEP 2026',
+    date: '25 SEP 2026',
     time: '01:00 AM - 07:30 AM',
     title: 'Overnight Hacking',
     description: 'Uninterrupted coding phase.',
@@ -133,7 +133,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-13',
     phase: 'MORNING REFUEL',
-    date: '12 SEP 2026',
+    date: '25 SEP 2026',
     time: '07:30 AM - 08:30 AM',
     title: 'Breakfast',
     description: 'Morning meal for participants.',
@@ -143,7 +143,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-14',
     phase: 'FINAL SPRINT',
-    date: '12 SEP 2026',
+    date: '25 SEP 2026',
     time: '08:30 AM - 10:30 AM',
     title: 'Final Code Refinement',
     description: 'Polishing projects and preparing pitch decks.',
@@ -153,7 +153,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-15',
     phase: 'CODE FREEZE',
-    date: '12 SEP 2026',
+    date: '25 SEP 2026',
     time: '11:00 AM',
     title: 'Hacking Ends',
     description: 'Submission portal closes.',
@@ -163,7 +163,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-16',
     phase: 'EXPO EVALUATION',
-    date: '12 SEP 2026',
+    date: '25 SEP 2026',
     time: '11:00 AM - 12:30 PM',
     title: 'Judging Round 1',
     description: 'Expo-style pitching and initial evaluations.',
@@ -173,7 +173,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-17',
     phase: 'FINAL LUNCH',
-    date: '12 SEP 2026',
+    date: '25 SEP 2026',
     time: '12:30 PM - 01:30 PM',
     title: 'Lunch Break',
     description: 'Lunch before the finale.',
@@ -183,7 +183,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-18',
     phase: 'FINALE SHOWDOWN',
-    date: '12 SEP 2026',
+    date: '25 SEP 2026',
     time: '01:30 PM - 03:00 PM',
     title: 'Final Presentations',
     description: 'Top teams pitch to the main judging panel.',
@@ -193,7 +193,7 @@ export const timelineData: TimelineMilestone[] = [
   {
     code: 'T-19',
     phase: 'VICTORY ASCENT',
-    date: '12 SEP 2026',
+    date: '25 SEP 2026',
     time: '03:00 PM - 04:00 PM',
     title: 'Closing Ceremony',
     description: 'Winner announcements and closing remarks.',

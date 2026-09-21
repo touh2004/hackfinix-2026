@@ -25,8 +25,8 @@ export const eventData: EventInfo = {
   year: '2026',
   tagline: 'BUILD THE IMPOSSIBLE.',
   subTagline: 'A 24-hour digital collision of audacious builders, engineers, and visionaries shaping the next computational frontier.',
-  dates: 'SEPTEMBER 11—12, 2026',
-  isoDate: '2026-09-11T09:00:00+05:30',
+  dates: 'SEPTEMBER 24—25, 2026',
+  isoDate: '2026-09-24T09:00:00+05:30',
   venue: 'University Grand Arena',
   city: 'Tech Corridor',
   coordinates: {

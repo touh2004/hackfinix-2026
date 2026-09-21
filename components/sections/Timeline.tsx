@@ -81,8 +81,8 @@ export default function Timeline() {
                 {isDay2Start && (
                   <div className="relative flex items-center justify-center gap-3 my-10 z-20">
                     <div className="h-px bg-gradient-to-r from-transparent via-[#00D9FF] to-transparent flex-1" />
-                    <span className="border border-[#00D9FF]/50 bg-[#03091b] px-3.5 py-1 rounded-xs text-[10px] font-bold text-[#00D9FF] shadow-[0_0_15px_rgba(0,217,255,0.25)] tracking-widest uppercase">
-                      DAY 2 // 12TH SEPTEMBER 2026
+                      <span className="border border-[#00D9FF]/50 bg-[#03091b] px-3.5 py-1 rounded-xs text-[10px] font-bold text-[#00D9FF] shadow-[0_0_15px_rgba(0,217,255,0.25)] tracking-widest uppercase">
+                      DAY 2 // 25TH SEPTEMBER 2026
                     </span>
                     <div className="h-px bg-gradient-to-r from-transparent via-[#00D9FF] to-transparent flex-1" />
                   </div>

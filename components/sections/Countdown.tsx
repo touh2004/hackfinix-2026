@@ -37,11 +37,11 @@ export default function Countdown() {
   return (
     <section className="relative py-12 w-full z-10">
       <div className="mb-6 flex flex-col items-start">
-        <SectionLabel tag="TEMPORAL TELEMETRY" coordinate="START: SEPT 11, 2026">
-          THE ARENA OPENS SEPTEMBER 11
+        <SectionLabel tag="TEMPORAL TELEMETRY" coordinate="START: SEPT 24, 2026">
+          THE ARENA OPENS SEPTEMBER 24
         </SectionLabel>
         <h2 className="hero-title text-xl sm:text-2xl lg:text-[2.2rem] text-[#F2F6FF] mt-2 leading-tight">
-          COUNTDOWN TO <span className="text-[#147DFF]">SEPTEMBER 11</span>
+          COUNTDOWN TO <span className="text-[#147DFF]">SEPTEMBER 24</span>
         </h2>
       </div>
 

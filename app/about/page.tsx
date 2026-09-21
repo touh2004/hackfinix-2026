@@ -182,7 +182,7 @@ export default function AboutPage() {
                   <span className="text-[9px] tracking-widest uppercase">SCHEDULE</span>
                 </div>
                 <div className="hero-title text-lg font-black text-[#F2F6FF] tracking-tight leading-none pt-2 mb-1.5">
-                  11-12 SEP
+                  24-25 SEP
                 </div>
                 <p className="text-[10px] text-[#8CA4C4] leading-tight font-bold">
                   September 2026

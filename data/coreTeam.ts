@@ -150,7 +150,7 @@ export const coreTeamMembers: CoreTeamMember[] = [
   {
     id: '12',
     personnelId: 'HF26-12',
-    name: 'PUNEETH',
+    name: '',
     role: 'GOODIES & GIFT LEAD',
     designation: 'SWAG, BADGES & MERCHANDISE',
     status: 'LEAD',
@@ -186,7 +186,7 @@ export const coreTeamMembers: CoreTeamMember[] = [
   {
     id: '15',
     personnelId: 'HF26-15',
-    name: 'RAJAT NAIK',
+    name: '',
     role: 'MARKETING & PR LEAD',
     designation: 'MEDIA, CAMPAIGNS & PUBLICITY',
     status: 'LEAD',
