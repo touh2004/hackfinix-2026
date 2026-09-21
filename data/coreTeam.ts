@@ -148,6 +148,18 @@ export const coreTeamMembers: CoreTeamMember[] = [
     bio: 'Technical Lead engineering interactive frontend components, motion interfaces, and telemetry visualizers.',
   },
   {
+    id: '12',
+    personnelId: 'HF26-12',
+    name: 'SATISH M TELI',
+    role: 'TECHNICAL LEAD',
+    designation: 'PLATFORM, PLATFORM ENGINE & INFRA',
+    status: 'LEAD',
+    image: '/team/satish.jpeg',
+    linkedin: 'https://www.linkedin.com/in/teli-satish',
+    revealType: 'pixel-reconstruct',
+    bio: 'Technical Lead contributing to platform engineering, system architecture, and technical delivery.',
+  },
+  {
     id: '13',
     personnelId: 'HF26-13',
     name: 'SOUMYA SHARMA',
