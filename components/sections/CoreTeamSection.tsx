@@ -15,7 +15,6 @@ interface CoreTeamSectionProps {
 const normalizeDisplayIds = (members: CoreTeamMember[]) =>
   members
     .filter((member) => member.name && member.name.trim().length > 0)
-    .sort((a, b) => Number(a.id) - Number(b.id))
     .map((member, index) => ({
       ...member,
       id: String(index + 1).padStart(2, '0'),
