@@ -20,18 +20,9 @@ const normalizeDisplayIds = (members: CoreTeamMember[]) =>
       id: String(index + 1).padStart(2, '0'),
     }))
 
-// 4 Main Convenors & Lead Organizers for home page
-const mainPageCoreTeamMembers = normalizeDisplayIds(
-  coreTeamMembers.filter((member) => {
-    const upper = member.name.toUpperCase()
-    return (
-      upper.includes('SUGUMAR') ||
-      upper.includes('ANKITA') ||
-      upper.includes('SHREYA') ||
-      upper.includes('POOJA')
-    )
-  })
-)
+// Keep the home-page scroll section aligned with the full core team roster
+// so the page can reveal the complete team after the intro operators instead of stopping at only four members.
+const mainPageCoreTeamMembers = normalizeDisplayIds(coreTeamMembers)
 
 // Remaining members for /team page, reordered from 01 upward without empty records
 export const restTeamMembers = normalizeDisplayIds(
